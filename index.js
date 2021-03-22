@@ -175,6 +175,12 @@
                 storageRemoveBtn.innerHTML = `<i class= "fa fa-trash"></i>`;
                 storageRow.children[3].appendChild(storageRemoveBtn);
                 
+                storageRemoveBtn.onclick = function(){
+                console.log(updateRow['rowKey']);
+                document.getElementById(updateRow['rowKey']).remove();
+                localStorage.removeItem(`rowInfo${updateRow['rowKey']}`);
+                  
+                }
 
             }
         }
