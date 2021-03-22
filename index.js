@@ -16,6 +16,15 @@
         let key = 1;
         let keyEdit = 2.1;
         var completedClick = 0;
+    //delete all function button
+    const deleteAll = document.querySelector("#deleteBtn");
+    deleteBtn.onclick = function(){
+        let o = confirm(`You are about to delete all, Are you sure?`);
+        if (o) {
+        localStorage.clear();
+        location.reload();
+        } 
+    }
     //remove row function
     function rmvBtnRow (id){     
       localStorage.removeItem(`rowInfo${id}`);
